@@ -1,0 +1,23 @@
+<html>
+    <style>
+        body{
+    background-color:#DDE6ED;               
+}
+        h2{
+    color:#27374D;
+    text-align:center;
+    margin-top:20px;
+    font-size:30px;
+}
+        #img{
+            border-style: solid;
+  border-color: #27374D;
+            width:800px;height:500px;margin-left:18%;border:2px;border-color:#27374D;
+        }
+    </style>
+    <body>
+        <h2>The prediction for longitude {{prediction[1]}} and latitude {{prediction[2]}} is {{prediction[0]}}</h2>
+                <img id="img" src="{{url_for("static",filename="california.png")}}" alt="California">
+
+    </body>
+</html>

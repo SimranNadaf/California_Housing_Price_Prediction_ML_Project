@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <title>California housing datset
+</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+body{
+    background-color:#DDE6ED;               
+}
+.label{
+    font-size: 20px;
+    color:#27374D;
+    margin:5px;
+}
+.field{
+    
+    font-size: 20px;
+    width:300px;
+/*     height:20px; */
+}
+.flex{ 
+    /* display: inline;
+    justify-content: flex-start;
+    margin-left:5%; */
+    text-align: left;
+  padding: 0px;
+  font-size: 30px;
+    
+}
+.row{
+    
+    display: grid;
+  justify-content: center;
+  gap:5%;
+}
+/* div{
+    padding:10px;
+    margin-top:10px;
+    margin-left:32%;
+   
+} */
+h1{
+    color:#27374D;
+    text-align:center;
+    margin-top:50px;
+    font-size:40px;
+}
+#button{
+    background-color:#27374D;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:20px;
+    border-radius:5px;
+    color:white;
+    text-align: center;
+    margin-left: 47%;
+}
+.item1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 2;
+  grid-row: 1;}
+        #img{
+            border-style: solid;
+  border-color: #27374D;
+            width:800px;height:500px;margin-left:18%;border:2px;border-color:#27374D;
+        }
+    </style>
+    <body>
+        <form action="{{ url_for("get_value")}}" method="post">
+         
+    <h1>California House Price Prediction Model</h1>
+    <br>
+<div class="row">
+    <div class='flex item1'>
+    <label for="log" class='label'><b>Longitude : </b></label><br>
+    <input type="text" class="field" name="log" id="email" required><br>
+    </div>
+    <div class="flex item2">
+    <label for="lan" class='label'><b>Latitude : </b></label><br>
+    <input type="text" class="field" name="lan" id="psw" required><br>
+    </div>
+</div>
+<br>
+     <div class='row'>
+        <div class='flex item1'>
+
+    <label for="mha" class='label'><b>Median Housing Age : </b></label>
+    <br>
+    <input type="text" class="field" name="mha" id="psw" required>
+</div>
+
+<div class='flex item2'>
+    
+    <label for="tr" class='label'><b>Total Rooms : </b></label>
+    <br>
+    <input type="text" class="field" name="tr" id="psw" required>
+</div>
+
+            </div>
+<br>
+     <div class='row'>
+    <div class='flex item1'>
+
+    <label for="tbr" class='label'><b>Total BedRooms : </b></label>
+    <br>
+    <input type="text" class="field" name="tbr" id="psw" required>
+</div>
+    
+
+<div class='flex item2'>
+    
+    <label for="popula" class='label'><b>Population : </b></label>
+    <br>
+    <input type="text" class="field" name="popula" id="psw" required>
+            </div>
+        </div>
+<br>
+     <div class='row'>
+    <div class='flex item1'>
+
+    <label for="hh" class='label'><b>HouseHold : </b></label>
+    <br>
+    <input type="text" class="field" name="hh" id="psw" required>
+</div>
+    
+<br>
+<div class='flex item2'>
+    
+    <label for="mi" class='label'><b>Median Income : </b></label>
+    <br>
+    <input type="text" class="field" name="mi" id="psw" required>
+            </div>
+        </div>
+
+   <div class='row'>
+    <div class='flex item1'>
+
+    <label for="mhv" class='label'><b>Median House Value: </b></label>
+    <br>
+    <input type="text" class="field" name="mhv" id="psw" required>
+</div>
+
+    <div class='flex item2'>
+       
+    <label for="op" class='label'><b>Ocean Proximity : </b></label>
+    <br>
+  <select name="op" class="field" required>
+    <option disabled selected value></option>
+    <option value="0"><1H OCEAN</option>
+    <option value="1">INLAND</option>
+    <option value="2">ISLAND</option>
+    <option value="3">NEAR BAY</option>
+    <option value="4">NEAR OCEAN</option>
+  </select>
+            </div>
+        </div>
+    <br>
+    <br>
+    <br>
+    <button type="submit" id="button">Submit</button>
+ 
+</form>
+        <img id="img" src="{{url_for("static",filename="california.png")}}" alt="California">
+    </body>
+</html>
